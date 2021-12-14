@@ -1,0 +1,56 @@
+.header {
+    padding-top: 35px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(18);
+            color: rgba($color: $dark-color, $alpha: 0.5);
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+    }
+
+    &__btn {
+        &-left {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: rgba($color: $dark-color, $alpha: 0.7);
+        }
+
+        &-right {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: $light-color;
+            text-align: center;
+            width: 129px;
+            line-height: 57px;
+            background-color: $accent-color;
+            border-radius: 6px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.footer {
+    padding: 50px 0;
+    background-color: rgba($color: #8EE6C9, $alpha: 0.1);
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            gap: 40px;
+            text-align: center;
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        line-height: 160%;
+        color: rgba($color: $dark-color, $alpha: 0.7);
+        max-width: 240px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: toRem(21);
+        font-weight: 500;
+        color: rgba($color: $dark-color, $alpha: 0.7);
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__item {
+        color: rgba($color: $dark-color, $alpha: 0.7);
+
+        &-link {
+            color: rgba($color: $dark-color, $alpha: 0.7);
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.discover {
+    padding-bottom: 200px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__content {
+        max-width: 450px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 160%;
+        font-weight: 500;
+        color: rgba($color: $dark-color, $alpha: 0.7);
+        margin-bottom: 20px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__item {
+        padding-left: 31px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/discover-item.png);
+            width: 20px;
+            height: 21px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

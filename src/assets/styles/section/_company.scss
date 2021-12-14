@@ -1,0 +1,27 @@
+.company {
+    padding: 55px 0;
+    background-color: rgba($color: #8EE6C9, $alpha: 0.1);
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 170px);
+        justify-content: space-between;
+        place-items: center;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(3, 170px);
+            gap: 40px;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 170px);
+            justify-content: center;
+            gap: 80px;
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 170px;
+            gap: 40px;
+        }
+    }
+}
